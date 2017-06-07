@@ -21,4 +21,7 @@ RUN builders=10 ;\
     adduser -S guix-builder$i guix-builder ;\
     adduser guix-builder$i guix-builder ;\
   done
-CMD guix-daemon --build-users-group=guix-builder --disable-deduplication
+
+COPY start.sh start.sh
+# --disable-duplication removes dependence on hard linking. deduplication is a performance enhancement and has no effect on reproducibility
+# CMD guix-daemon --build-users-group=guix-builder --disable-deduplication
