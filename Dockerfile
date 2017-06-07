@@ -21,4 +21,4 @@ RUN builders=10 ;\
     adduser -S guix-builder$i guix-builder ;\
     adduser guix-builder$i guix-builder ;\
   done
-CMD guix-daemon --build-users-group=guix-builder
+CMD guix-daemon --build-users-group=guix-builder --disable-deduplication
