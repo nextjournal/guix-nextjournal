@@ -2,6 +2,8 @@
 
 # Start the guix build daemon
 
+guix archive --authorize < ~root/.guix-profile/share/guix/hydra.gnu.org.pub
+
 guix-daemon --build-users-group=guix-builder --disable-deduplication
 status=$?
 if [ $status -ne 0 ]; then
