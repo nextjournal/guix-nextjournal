@@ -1,6 +1,7 @@
 ARG PROFILE_HASH
 FROM profile:$PROFILE_HASH
 MAINTAINER Joshua Sierles <joshua@joshua.si>
+ARG PROFILE_HASH
 ENV PROFILE_HASH $PROFILE_HASH
 ENV PATH /root/.guix-profile/bin:$PATH
 RUN mkdir /tmp /wrappers
