@@ -1,11 +1,13 @@
 PACKAGES="coreutils gawk grep gzip sed vim bash linux-libre-headers gcc-toolchain gfortran make \
           libjpeg libpng \
-          r-minimal r-base64enc r-jsonlite r-plotly r-feather r-devtools"
+          r-minimal r-base64enc r-jsonlite r-plotly r-feather r-devtools \
+          julia \
+          conda"
 
 GUIX_COMMAND="guix pack -S /bin=bin -f docker $PACKAGES"
 
 echo $GUIX_COMMAND
-TAR_PATH=/home/core/gnu/store/`docker exec -e GUIX_PACKAGE_PATH=/modules -t guix $GUIX_COMMAND grep pack | grep -v drv | cut -d/ -f 4`
+TAR_PATH=/home/core/gnu/store/`docker exec -e GUIX_PACKAGE_PATH=/modules -t guix $GUIX_COMMAND | grep pack | grep -v drv | cut -d/ -f 4`
 TAR_PATH=${TAR_PATH%?}
 echo "Loading build from $TAR_PATH"
 
