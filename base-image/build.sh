@@ -1,5 +1,5 @@
 PACKAGES="coreutils gawk grep gzip sed vim bash linux-libre-headers gcc-toolchain gfortran make \
-          libjpeg libpng \
+          libjpeg libpng gsl \
           r-minimal r-base64enc r-jsonlite r-plotly r-feather r-devtools \
           julia \
           conda"
