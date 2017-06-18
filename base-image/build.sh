@@ -1,8 +1,7 @@
-PACKAGES="coreutils gawk grep gzip sed vim bash linux-libre-headers gcc-toolchain gfortran make \
+PACKAGES="coreutils tar gawk grep gzip sed vim bash linux-libre-headers gcc-toolchain gfortran make \
           libjpeg libpng gsl \
           r-minimal r-base64enc r-jsonlite r-plotly r-feather r-devtools \
-          julia \
-          conda"
+          julia"
 
 GUIX_COMMAND="guix pack -S /bin=bin -f docker $PACKAGES"
 
