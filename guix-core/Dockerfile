@@ -14,5 +14,6 @@ COPY start-daemon.sh start-daemon.sh
 COPY init-daemon.sh init-daemon.sh
 COPY init-store.sh init-store.sh
 COPY init-profile.sh init-profile.sh
+COPY build-for-docker.sh build-for-docker.sh
 RUN ./init-profile.sh
 RUN ./init-daemon.sh
