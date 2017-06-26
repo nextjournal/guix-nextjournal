@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Start the guix build daemon
+source ~root/.guix-profile/etc/profile
 
 guix archive --authorize < ~root/.guix-profile/share/guix/hydra.gnu.org.pub
 
