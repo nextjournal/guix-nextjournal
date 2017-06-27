@@ -9,4 +9,4 @@ mv gnu/store/* /gnu/store
 
 echo "Copying GUIX database to /var/guix/db..."
 rm -rf /var/guix/db/*
-mv var/guix/db /var/guix/db
+mv var/guix/db/* /var/guix/db
