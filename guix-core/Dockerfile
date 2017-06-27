@@ -6,7 +6,7 @@ LABEL Description="This is a minimal Linux (Alpine) with GNU Guix package manage
 ENV PATH /root/.guix-profile/bin:$PATH
 ENV GUIX_VERSION 0.13.0
 
-RUN apk --no-cache add openssl
+RUN apk --no-cache add openssl socat
 RUN wget https://alpha.gnu.org/gnu/guix/guix-binary-0.13.0.x86_64-linux.tar.xz && \
     mv guix-binary-${GUIX_VERSION}.x86_64-linux.tar.xz /root/.guix-binary-${GUIX_VERSION}.x86_64-linux.tar.xz
 
