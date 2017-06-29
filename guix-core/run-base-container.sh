@@ -4,4 +4,4 @@
 #
 
 
-docker run -it -d --name guix -v $PWD/../modules:/modules -v guix-store:/gnu/store guix-var:/var/guix nextjournal/guix
+docker run -it -d -e GUIX_PACKAGE_PATH=/modules --name guix -v $PWD/../modules:/modules -v guix-store:/gnu/store guix-var:/var/guix nextjournal/guix
